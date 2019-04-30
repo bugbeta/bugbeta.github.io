@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="设备清单 192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备  安装ansibleyum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168.6.15">
+<meta name="description" content="设备清单192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备 安装ansible 123456yum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ceph部署及使用">
 <meta property="og:url" content="http://yoursite.com/2019/04/30/ceph部署及使用/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="设备清单 192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备  安装ansibleyum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168.6.15">
+<meta property="og:description" content="设备清单192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备 安装ansible 123456yum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-30T01:26:04.091Z">
+<meta property="og:updated_time" content="2019-04-30T02:00:44.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ceph部署及使用">
-<meta name="twitter:description" content="设备清单 192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备  安装ansibleyum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168.6.15">
+<meta name="twitter:description" content="设备清单192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备 安装ansible 123456yum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168">
 
 
 
@@ -299,30 +299,24 @@
       
 
       
-        <p>设备清单</p>
-<p>192.168.6.156        node1(OSD MON)<br>192.168.6.157        node2(OSD MON)<br>192.168.6.158        node3(OSD MON)</p>
-<p>前置准备</p>
-<ol>
-<li>安装ansible<br>yum -y install ansible<br>vi /etc/ansible/hosts<br>[node]<br>192.168.6.156<br>192.168.6.157<br>192.168.6.158</li>
-<li>配置hosts<br>[root@admin-node ~]# cat /etc/hosts<br>127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4<br>::1         localhost localhost.localdomain localhost6 localhost6.localdomain6</li>
-</ol>
-<p>192.168.6.155 admin-node<br>192.168.6.156 node1<br>192.168.6.157 node2<br>192.168.6.158 node3</p>
-<ol start="3">
-<li>配置互信<br>ssh-keygen -t rsa<br>ssh-copy-id -i ~/.ssh/id_rsa.pub root@node1</li>
-</ol>
+        <h3 id="设备清单"><a href="#设备清单" class="headerlink" title="设备清单"></a>设备清单</h3><p>192.168.6.156        node1(OSD MON)<br>192.168.6.157        node2(OSD MON)<br>192.168.6.158        node3(OSD MON)</p>
+<h3 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h3><ul>
+<li><p>安装ansible</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ansible</span><br><span class="line">vi /etc/ansible/hosts</span><br><span class="line">[node]</span><br><span class="line">192.168.6.156</span><br><span class="line">192.168.6.157</span><br><span class="line">192.168.6.158</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置hosts</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@admin-node ~]# cat /etc/hosts</span><br><span class="line">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">::1         localhost localhost.localdomain localhost6 localhost6.localdomain6</span><br><span class="line"></span><br><span class="line">192.168.6.155 admin-node</span><br><span class="line">192.168.6.156 node1</span><br><span class="line">192.168.6.157 node2</span><br><span class="line">192.168.6.158 node3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置互信</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@node1</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>批量命令示例：<br>ansible node -m copy -a ‘src=/etc/hosts dest=/etc/‘<br>ansible node -a ‘systemctl stop firewalld’</p>
-<ol start="4">
-<li>安装必要软件<br>yum install -y yum-utils<br>yum-config-manager –add-repo <a href="https://dl.fedoraproject.org/pub/epel/7/x86_64/" target="_blank" rel="noopener">https://dl.fedoraproject.org/pub/epel/7/x86_64/</a><br>yum install –nogpgcheck -y epel-release<br>rpm –import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7<br>rm -f /etc/yum.repos.d/dl.fedoraproject.org*</li>
-</ol>
-<p>[root@localhost yum.repos.d]# cat ceph.repo<br>[ceph]<br>name=Ceph noarch packages<br>baseurl=<a href="http://download.ceph.com/rpm-mimic/el7/x86_64" target="_blank" rel="noopener">http://download.ceph.com/rpm-mimic/el7/x86_64</a><br>enabled=1<br>gpgcheck=1<br>type=rpm-md<br>gpgkey=<a href="https://download.ceph.com/keys/release.asc" target="_blank" rel="noopener">https://download.ceph.com/keys/release.asc</a></p>
-<p>scp /etc/hosts 192.168.6.156:/etc/<br>scp /etc/yum.repos.d/ceph.repo 192.168.6.158:/etc/yum.repos.d/</p>
-<p>scp /etc/yum.repos.d/ceph.repo node3:/etc/yum.repos.d/ceph.repo</p>
-<p>yum install -y ntpdate</p>
-<p>1 <em>/2 </em> <em> </em> /sbin/ntpdate -u 192.168.6.130 &gt;/dev/null 2&gt;&amp;1</p>
-<p>yum -y install ceph-deploy</p>
-<p>修改主机名：<br>vi /etc/hostname</p>
-<p>hostname admin-node</p>
-<p>部署集群<br>各主机执行<br>useradd ceph-admin<br>echo “ceph-admin ALL = (root) NOPASSWD:ALL” | tee /etc/sudoers.d/ceph-admin<br>chmod 0440 /etc/sudoers.d/ceph-admin</p>
+<ul>
+<li>安装必要软件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils</span><br><span class="line">yum-config-manager --add-repo https://dl.fedoraproject.org/pub/epel/7/x86_64/</span><br><span class="line">yum install --nogpgcheck -y epel-release</span><br><span class="line">rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7</span><br><span class="line">rm -f /etc/yum.repos.d/dl.fedoraproject.org*</span><br><span class="line"></span><br><span class="line">[root@localhost yum.repos.d]<span class="comment"># cat ceph.repo</span></span><br><span class="line">[ceph]</span><br><span class="line">name=Ceph noarch packages</span><br><span class="line">baseurl=http://download.ceph.com/rpm-mimic/el7/x86_64</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line"><span class="built_in">type</span>=rpm-md</span><br><span class="line">gpgkey=https://download.ceph.com/keys/release.asc</span><br><span class="line"></span><br><span class="line">scp /etc/hosts 192.168.6.156:/etc/</span><br><span class="line">scp /etc/yum.repos.d/ceph.repo 192.168.6.158:/etc/yum.repos.d/</span><br><span class="line"></span><br><span class="line">scp /etc/yum.repos.d/ceph.repo node3:/etc/yum.repos.d/ceph.repo</span><br><span class="line"></span><br><span class="line">yum install -y ntpdate</span><br><span class="line"></span><br><span class="line">1 */2 * * * /sbin/ntpdate -u 192.168.6.130 &gt;/dev/null 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">yum -y install ceph-deploy</span><br><span class="line"></span><br><span class="line">修改主机名：</span><br><span class="line">vi /etc/hostname</span><br><span class="line"></span><br><span class="line">hostname admin-node</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="部署集群"><a href="#部署集群" class="headerlink" title="部署集群"></a>部署集群</h3><p>各主机执行<br>useradd ceph-admin<br>echo “ceph-admin ALL = (root) NOPASSWD:ALL” | tee /etc/sudoers.d/ceph-admin<br>chmod 0440 /etc/sudoers.d/ceph-admin</p>
 <p>无密码登录配置： deploy 主机执行<br>su - ceph-admin<br>ssh-keygen<br>将 deploy 主机上 id_rsa.pub 复制至各节点：/home/ceph-admin/.ssh/authorized_keys<br>chmod 400 authorized_keys</p>
 <p>先在管理节点上创建一个目录，用于保存 ceph-deploy 生成的配置文件和密钥对</p>
 <p>cd my-cluster<br>ceph-deploy new node1<br>修改副本数<br>把下面这行加入 [global] 段：<br>osd pool default size = 2</p>
@@ -355,18 +349,17 @@
 <ol start="7">
 <li>启动osd创建数据<br>[ceph-admin@admin-node my-cluster]$ ceph-deploy osd create –data /dev/sdb node{1,2,3}</li>
 </ol>
-<p>集群启停<br>启动<br>systemctl start ceph.target</p>
-<p>停止<br>systemctl stop ceph*.service ceph*.target</p>
-<p>根据进程类型启停<br>systemctl start ceph-osd.target<br>systemctl start ceph-mon.target<br>systemctl start ceph-mds.target</p>
+<h3 id="集群启停"><a href="#集群启停" class="headerlink" title="集群启停"></a>集群启停</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p>systemctl start ceph.target</p>
+<h4 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h4><p>systemctl stop ceph*.service ceph*.target</p>
+<h4 id="根据进程类型启停"><a href="#根据进程类型启停" class="headerlink" title="根据进程类型启停"></a>根据进程类型启停</h4><p>systemctl start ceph-osd.target<br>systemctl start ceph-mon.target<br>systemctl start ceph-mds.target</p>
 <p>systemctl stop ceph-mon*.service ceph-mon.target<br>systemctl stop ceph-osd*.service ceph-osd.target<br>systemctl stop ceph-mds*.service ceph-mds.target</p>
-<p>移除节点<br>ceph-deploy purge admin-node<br>ceph-deploy purgedata admin-node</p>
-<p>删除镜像<br><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1561758" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=1561758</a><br>存在 bug<br>rbd: error: image still has watchers<br>This means the image is still open or the client using it crashed. Try again after closing/unmapping it or waiting 30s for the crashed client to timeout.</p>
-<p>创建rgw网关<br>RADOSGW：RADOSGW是一套基于当前流行的RESTFUL协议的网关，并且兼容S3和Swift</p>
+<h4 id="移除节点"><a href="#移除节点" class="headerlink" title="移除节点"></a>移除节点</h4><p>ceph-deploy purge admin-node<br>ceph-deploy purgedata admin-node</p>
+<h4 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h4><p><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1561758" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=1561758</a><br>存在 bug<br>rbd: error: image still has watchers<br>This means the image is still open or the client using it crashed. Try again after closing/unmapping it or waiting 30s for the crashed client to timeout.</p>
+<h3 id="创建rgw网关"><a href="#创建rgw网关" class="headerlink" title="创建rgw网关"></a>创建rgw网关</h3><p>RADOSGW：RADOSGW是一套基于当前流行的RESTFUL协议的网关，并且兼容S3和Swift</p>
 <p>ceph-deploy install –rgw node1 –no-adjust-repos</p>
 <p>ceph-deploy gatherkeys node1</p>
 <p>ceph-deploy rgw create node1</p>
-<p>ISCSI 网关</p>
-<ol>
+<h3 id="ISCSI-网关"><a href="#ISCSI-网关" class="headerlink" title="ISCSI 网关"></a>ISCSI 网关</h3><ol>
 <li>升级系统内核至4.16<br>升级后切换内核<br>grub2-set-default 0<br>grub2-editenv list<br>重启服务器</li>
 </ol>
 <p><a href="http://docs.ceph.com/docs/mimic/rbd/iscsi-target-ansible/" target="_blank" rel="noopener">http://docs.ceph.com/docs/mimic/rbd/iscsi-target-ansible/</a></p>
@@ -379,39 +372,46 @@
 <ol start="2">
 <li>创建ISCSI网关<br>gwcli<br>cd iscsi-target<br>create iqn.2003-01.com.redhat.iscsi-gw:iscsi-igw<br>create node1 192.168.6.156 skipchecks=true<br>create node2 192.168.6.157 skipchecks=true</li>
 </ol>
-<h1 id="配置用户密码"><a href="#配置用户密码" class="headerlink" title="配置用户密码"></a>配置用户密码</h1><p>/iscsi-target…1eba-7245c996&gt; auth esxiuser/esxiuser_123</p>
+<h3 id="配置用户密码"><a href="#配置用户密码" class="headerlink" title="配置用户密码"></a>配置用户密码</h3><p>/iscsi-target…1eba-7245c996&gt; auth esxiuser/esxiuser_123</p>
 <ol start="3">
 <li>创建RBD image<br>RBD的使用实际上就是对RBD image的使用，RBD image是由多个对象条带化存储到后端的块设备。<br>查看块设备的命令是rbd info {pool-name}/{image-name}</li>
 </ol>
 <p>/iscsi-target&gt; cd /disks<br>/disks&gt; create rbd vol01 1G;</p>
 <p>#格式 create pool=rbd image= vol01 size=1G</p>
-<h1 id="esxi中获取"><a href="#esxi中获取" class="headerlink" title="esxi中获取"></a>esxi中获取</h1><p>/iscsi-target…csi-igw/hosts&gt; create iqn.1998-01.com.vmware:5bced6fd-5645-4a6a-cf73-b88303541eba-7245c996<br>/iscsi-target…1eba-7245c996&gt; disk add rbd.vol01</p>
+<h3 id="esxi中获取"><a href="#esxi中获取" class="headerlink" title="esxi中获取"></a>esxi中获取</h3><p>/iscsi-target…csi-igw/hosts&gt; create iqn.1998-01.com.vmware:5bced6fd-5645-4a6a-cf73-b88303541eba-7245c996<br>/iscsi-target…1eba-7245c996&gt; disk add rbd.vol01</p>
 <p>最终效果：</p>
 <ol start="4">
 <li>esxi使用ceph<br><a href="http://docs.ceph.com/docs/mimic/rbd/iscsi-initiator-esx/" target="_blank" rel="noopener">http://docs.ceph.com/docs/mimic/rbd/iscsi-initiator-esx/</a></li>
 </ol>
-<h1 id="需在esxi主机上执行此命令，web前台配置不生效。"><a href="#需在esxi主机上执行此命令，web前台配置不生效。" class="headerlink" title="需在esxi主机上执行此命令，web前台配置不生效。"></a>需在esxi主机上执行此命令，web前台配置不生效。</h1><p>[root@localhost:~] esxcli iscsi adapter auth chap set –direction=uni –authname=esxiuser –secret=esxiuser_123 –level=discouraged -A vmhba68<br>客户端挂载 ceph 文件系统</p>
+<p>需在esxi主机上执行此命令，web前台配置不生效。</p>
+<p>[root@localhost:~] esxcli iscsi adapter auth chap set –direction=uni –authname=esxiuser –secret=esxiuser_123 –level=discouraged -A vmhba68<br>客户端挂载 ceph 文件系统</p>
 <ol>
-<li>创建MDS<br>ceph-deploy mds create admin-node</li>
+<li>创建MDS<br>ceph-deploy mds create admin-node<br>ceph-deploy mds create ceph{1,2,3}</li>
 </ol>
-<h1 id="ceph-deploy-mds-create-ceph-1-2-3"><a href="#ceph-deploy-mds-create-ceph-1-2-3" class="headerlink" title="ceph-deploy mds create ceph{1,2,3}"></a>ceph-deploy mds create ceph{1,2,3}</h1><p>使用文件系统功能时，必须要有元数据服务器。</p>
+<p>使用文件系统功能时，必须要有元数据服务器。</p>
 <ol start="2">
-<li>创建 pool<br>Ceph文件系统至少需要两个RADOS池，一个用于数据，一个用于元数据</li>
+<li><p>创建 pool<br>Ceph文件系统至少需要两个RADOS池，一个用于数据，一个用于元数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#ceph osd pool create cephfs_data 128</span><br><span class="line">pool &apos;cephfs_data&apos; created</span><br><span class="line">#ceph osd pool create cephfs_metadata 64</span><br><span class="line">pool &apos;cephfs_metadata&apos; created</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建文件系统<br>[ceph-admin@admin-node my-cluster]$ ceph fs new cephfs cephfs_metadata cephfs_data<br>new fs with metadata pool 2 and data pool 1</p>
+</li>
+<li><p>查看FS<br>[ceph-admin@admin-node my-cluster]$ ceph fs ls<br>name: cephfs, metadata pool: cephfs_metadata, data pools: [cephfs_data ]</p>
+</li>
 </ol>
-<h1 id="ceph-osd-pool-create-cephfs-data-128"><a href="#ceph-osd-pool-create-cephfs-data-128" class="headerlink" title="ceph osd pool create cephfs_data 128"></a>ceph osd pool create cephfs_data 128</h1><p>pool ‘cephfs_data’ created</p>
-<h1 id="ceph-osd-pool-create-cephfs-metadata-64"><a href="#ceph-osd-pool-create-cephfs-metadata-64" class="headerlink" title="ceph osd pool create cephfs_metadata 64"></a>ceph osd pool create cephfs_metadata 64</h1><p>pool ‘cephfs_metadata’ created</p>
-<ol start="3">
-<li>创建文件系统<br>[ceph-admin@admin-node my-cluster]$ ceph fs new cephfs cephfs_metadata cephfs_data<br>new fs with metadata pool 2 and data pool 1</li>
-</ol>
-<p>查看FS<br>[ceph-admin@admin-node my-cluster]$ ceph fs ls<br>name: cephfs, metadata pool: cephfs_metadata, data pools: [cephfs_data ]</p>
 <p>[ceph-admin@admin-node my-cluster]$ ceph mds stat<br>cephfs-1/1/1 up  {0=admin-node=up:active}</p>
 <ol start="4">
-<li>使用文件系统<br>yum install ceph-common</li>
+<li><p>使用文件系统<br>yum install ceph-common</p>
+</li>
+<li><p>加载模块<br>[root@admin-node my-cluster]# lsmod |grep rbd<br>[root@admin-node my-cluster]# modprobe rbd<br>[root@admin-node my-cluster]# lsmod |grep rbd<br>rbd                    83889  0<br>libceph               282661  1 rbd</p>
+</li>
 </ol>
-<p>加载模块<br>[root@admin-node my-cluster]# lsmod |grep rbd<br>[root@admin-node my-cluster]# modprobe rbd<br>[root@admin-node my-cluster]# lsmod |grep rbd<br>rbd                    83889  0<br>libceph               282661  1 rbd</p>
 <p>[root@admin-node my-cluster]# mkdir /mnt/mycephfs</p>
-<p>获取key<br>[root@admin-node my-cluster]# ceph auth get-key client.admin<br>AQAn+VNc/gPhIBAAUvZ8+IMFvDlUP9wJP19duw==</p>
-<p>挂载<br>mount -t ceph node1:6789,node2:6789,node3:6789:/ /mnt/mycephfs -o name=admin,secret=AQAn+VNc/gPhIBAAUvZ8+IMFvDlUP9wJP19duw==</p>
+<ol start="6">
+<li><p>获取key<br>[root@admin-node my-cluster]# ceph auth get-key client.admin<br>AQAn+VNc/gPhIBAAUvZ8+IMFvDlUP9wJP19duw==</p>
+</li>
+<li><p>挂载<br>mount -t ceph node1:6789,node2:6789,node3:6789:/ /mnt/mycephfs -o name=admin,secret=AQAn+VNc/gPhIBAAUvZ8+IMFvDlUP9wJP19duw==</p>
+</li>
+</ol>
 <ol start="5">
 <li><p>删除 cephfs<br>在各节点执行： systemctl stop <a href="mailto:ceph-mds@ceph1.service" target="_blank" rel="noopener">ceph-mds@ceph1.service</a><br>不同节点 @ 后内容不一样。<br>ceph fs rm cephfs –yes-i-really-mean-it</p>
 </li>
@@ -419,11 +419,12 @@
 </li>
 </ol>
 <p>ceph osd pool delete cephfs_metadata cephfs_metadata –yes-i-really-really-mean-it</p>
-<p>k8s使用rbd</p>
-<ol>
+<h3 id="k8s使用rbd"><a href="#k8s使用rbd" class="headerlink" title="k8s使用rbd"></a>k8s使用rbd</h3><ol>
 <li>创建pool<br>ceph osd pool create k8s-rbd 64 64</li>
 </ol>
+<blockquote>
 <p>#查看 pool<br>ceph osd lspools</p>
+</blockquote>
 <ol start="2">
 <li><p>设置配额<br>ceph osd pool set-quota k8s-rbd max_bytes 2048000000000<br>要取消配额，设置为 0</p>
 </li>
@@ -433,34 +434,31 @@
 <p>[root@ceph1 ~]# ceph health detail<br>HEALTH_WARN application not enabled on 1 pool(s)<br>POOL_APP_NOT_ENABLED application not enabled on 1 pool(s)<br>    application not enabled on pool ‘k8s-rbd’<br>    use ‘ceph osd pool application enable <pool-name> <app-name>‘, where <app-name> is ‘cephfs’, ‘rbd’, ‘rgw’, or freeform for custom applications.<br>[root@ceph1 ~]# ceph osd pool application enable k8s-rbd k8s<br>enabled application ‘k8s’ on pool ‘k8s-rbd’<br>cephfs用户管理</app-name></app-name></pool-name></p>
 <ol>
 <li>list user<br>ceph auth list</li>
-<li>add user<h1 id="mds-caps-可以针对路径进行授权-但是如果两个目录存储在同一个-pool-上的话-即便针对-path-授权似乎也没什么效果-hammer-不支持mds-caps-中的-path-设置"><a href="#mds-caps-可以针对路径进行授权-但是如果两个目录存储在同一个-pool-上的话-即便针对-path-授权似乎也没什么效果-hammer-不支持mds-caps-中的-path-设置" class="headerlink" title="mds caps 可以针对路径进行授权, 但是如果两个目录存储在同一个 pool 上的话, 即便针对 path 授权似乎也没什么效果( hammer 不支持mds caps 中的 path 设置)."></a>mds caps 可以针对路径进行授权, 但是如果两个目录存储在同一个 pool 上的话, 即便针对 path 授权似乎也没什么效果( hammer 不支持mds caps 中的 path 设置).</h1><h1 id="osd-caps-可以针对-pool-进行授权-这个还是比较好使的-但是要注意与前面的-path-保持一致"><a href="#osd-caps-可以针对-pool-进行授权-这个还是比较好使的-但是要注意与前面的-path-保持一致" class="headerlink" title="osd caps 可以针对 pool 进行授权, 这个还是比较好使的, 但是要注意与前面的 path 保持一致."></a>osd caps 可以针对 pool 进行授权, 这个还是比较好使的, 但是要注意与前面的 path 保持一致.</h1></li>
+<li><p>add user</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># mds caps 可以针对路径进行授权, 但是如果两个目录存储在同一个 pool 上的话, 即便针对 path 授权似乎也没什么效果( hammer 不支持mds caps 中的 path 设置).</span><br><span class="line"># osd caps 可以针对 pool 进行授权, 这个还是比较好使的, 但是要注意与前面的 path 保持一致.</span><br><span class="line"></span><br><span class="line">[root@admin-node ceph]# ceph auth get-or-create client.lubx mon &apos;allow r&apos; mds &apos;allow r,allow rw path=/lubx&apos; osd &apos;allow rw pool=cephfs_data&apos;</span><br><span class="line">[client.lubx]</span><br><span class="line">        key = AQBljnxcERWgJRAAlJMT2Un9FfTjBBMEJ6ucNg==</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改权限<br>ceph auth caps client.lubx mds ‘allow r path=/lubx’ mon ‘allow r’ osd ‘allow rw pool=cephfs_data’</p>
+</li>
 </ol>
-<p>[root@admin-node ceph]# ceph auth get-or-create client.lubx mon ‘allow r’ mds ‘allow r,allow rw path=/lubx’ osd ‘allow rw pool=cephfs_data’<br>[client.lubx]<br>        key = AQBljnxcERWgJRAAlJMT2Un9FfTjBBMEJ6ucNg==</p>
-<ol start="3">
-<li>修改权限<br>ceph auth caps client.lubx mds ‘allow r path=/lubx’ mon ‘allow r’ osd ‘allow rw pool=cephfs_data’</li>
-</ol>
-<p>集群监控</p>
-<ol>
-<li>启动dashboard<br>ceph mgr module enable dashboard</li>
-</ol>
-<h1 id="查看module"><a href="#查看module" class="headerlink" title="查看module"></a>查看module</h1><p>ceph mgr module ls</p>
-<ol start="2">
+<h3 id="集群监控"><a href="#集群监控" class="headerlink" title="集群监控"></a>集群监控</h3><ol>
+<li><p>启动dashboard</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ceph mgr module enable dashboard</span><br><span class="line"># 查看module</span><br><span class="line">ceph mgr module ls</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>生成证书<br>ceph dashboard create-self-signed-cert</p>
 </li>
 <li><p>创建用户<br>ceph dashboard set-login-credentials admin admin</p>
 </li>
-<li>查看服务<br>ceph mgr services<br>检查状态</li>
+<li>查看服务<br>ceph mgr services<h3 id="检查状态"><a href="#检查状态" class="headerlink" title="检查状态"></a>检查状态</h3></li>
 <li><p>集群状态<br>ceph -s  –检查状态<br>ceph df  –查看空间</p>
 </li>
 <li><p>集群配置查看<br>ceph daemon /var/run/ceph/ceph-mon.*.asok config show|grep rbd_default</p>
 </li>
-<li>mon状态<br>ceph mon stat –查看mon相关信息<br>ceph quorum_status –查看选举状态<br>{“election_epoch”:4,”quorum”:[0,1,2],”quorum_names”:[“node1”,”node2”,”node3”],”quorum_leader_name”:”node1”,”monmap”:{“epoch”:1,”fsid”:”63077366-425b-46f3-b9f7-ce214a13403f”,”modified”:”2019-02-01 15:45:37.066998”,”created”:”2019-02-01 15:45:37.066998”,”features”:{“persistent”:[“kraken”,”luminous”,”mimic”,”osdmap-prune”],”optional”:[]},”mons”:[{“rank”:0,”name”:”node1”,”addr”:”192.168.6.156:6789/0”,”public_addr”:”192.168.6.156:6789/0”},{“rank”:1,”name”:”node2”,”addr”:”192.168.6.157:6789/0”,”public_addr”:”192.168.6.157:6789/0”},{“rank”:2,”name”:”node3”,”addr”:”192.168.6.158:6789/0”,”public_addr”:”192.168.6.158:6789/0”}]}}</li>
-</ol>
-<p>ceph mon dump  –查看 mon 映射信息<br>dumped monmap epoch 1<br>epoch 1<br>fsid 63077366-425b-46f3-b9f7-ce214a13403f<br>last_changed 2019-02-01 15:45:37.066998<br>created 2019-02-01 15:45:37.066998<br>0: 192.168.6.156:6789/0 mon.node1<br>1: 192.168.6.157:6789/0 mon.node2<br>2: 192.168.6.158:6789/0 mon.node3</p>
-<p>sudo ceph daemon mon.node1 mon_status  –node1 节点执行查看详细信息</p>
-<ol start="4">
+<li><p>mon状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ceph mon stat --查看mon相关信息</span><br><span class="line">ceph quorum_status --查看选举状态</span><br><span class="line">&#123;&quot;election_epoch&quot;:4,&quot;quorum&quot;:[0,1,2],&quot;quorum_names&quot;:[&quot;node1&quot;,&quot;node2&quot;,&quot;node3&quot;],&quot;quorum_leader_name&quot;:&quot;node1&quot;,&quot;monmap&quot;:&#123;&quot;epoch&quot;:1,&quot;fsid&quot;:&quot;63077366-425b-46f3-b9f7-ce214a13403f&quot;,&quot;modified&quot;:&quot;2019-02-01 15:45:37.066998&quot;,&quot;created&quot;:&quot;2019-02-01 15:45:37.066998&quot;,&quot;features&quot;:&#123;&quot;persistent&quot;:[&quot;kraken&quot;,&quot;luminous&quot;,&quot;mimic&quot;,&quot;osdmap-prune&quot;],&quot;optional&quot;:[]&#125;,&quot;mons&quot;:[&#123;&quot;rank&quot;:0,&quot;name&quot;:&quot;node1&quot;,&quot;addr&quot;:&quot;192.168.6.156:6789/0&quot;,&quot;public_addr&quot;:&quot;192.168.6.156:6789/0&quot;&#125;,&#123;&quot;rank&quot;:1,&quot;name&quot;:&quot;node2&quot;,&quot;addr&quot;:&quot;192.168.6.157:6789/0&quot;,&quot;public_addr&quot;:&quot;192.168.6.157:6789/0&quot;&#125;,&#123;&quot;rank&quot;:2,&quot;name&quot;:&quot;node3&quot;,&quot;addr&quot;:&quot;192.168.6.158:6789/0&quot;,&quot;public_addr&quot;:&quot;192.168.6.158:6789/0&quot;&#125;]&#125;&#125;</span><br><span class="line"></span><br><span class="line">ceph mon dump  --查看 mon 映射信息</span><br><span class="line">dumped monmap epoch 1</span><br><span class="line">epoch 1</span><br><span class="line">fsid 63077366-425b-46f3-b9f7-ce214a13403f</span><br><span class="line">last_changed 2019-02-01 15:45:37.066998</span><br><span class="line">created 2019-02-01 15:45:37.066998</span><br><span class="line">0: 192.168.6.156:6789/0 mon.node1</span><br><span class="line">1: 192.168.6.157:6789/0 mon.node2</span><br><span class="line">2: 192.168.6.158:6789/0 mon.node3</span><br><span class="line"></span><br><span class="line">sudo ceph daemon mon.node1 mon_status  --node1 节点执行查看详细信息</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>osd状态</p>
-<h1 id="ceph-osd-stat-查看-osd-运行状态"><a href="#ceph-osd-stat-查看-osd-运行状态" class="headerlink" title="ceph osd stat                  ##查看 osd 运行状态"></a>ceph osd stat                  ##查看 osd 运行状态</h1><h1 id="ceph-osd-dump-查看-osd-映射信息"><a href="#ceph-osd-dump-查看-osd-映射信息" class="headerlink" title="ceph osd dump                  ##查看 osd 映射信息"></a>ceph osd dump                  ##查看 osd 映射信息</h1><h1 id="ceph-osd-perf-查看数据延迟"><a href="#ceph-osd-perf-查看数据延迟" class="headerlink" title="ceph osd perf                  ##查看数据延迟"></a>ceph osd perf                  ##查看数据延迟</h1><h1 id="ceph-osd-df-详细列出集群每块磁盘的使用情况"><a href="#ceph-osd-df-详细列出集群每块磁盘的使用情况" class="headerlink" title="ceph osd df                    ##详细列出集群每块磁盘的使用情况"></a>ceph osd df                    ##详细列出集群每块磁盘的使用情况</h1><h1 id="ceph-osd-tree-查看-osd-目录树"><a href="#ceph-osd-tree-查看-osd-目录树" class="headerlink" title="ceph osd tree                  ##查看 osd 目录树"></a>ceph osd tree                  ##查看 osd 目录树</h1><h1 id="ceph-osd-getmaxosd-查看最大-osd-的个数"><a href="#ceph-osd-getmaxosd-查看最大-osd-的个数" class="headerlink" title="ceph osd getmaxosd             ##查看最大 osd 的个数"></a>ceph osd getmaxosd             ##查看最大 osd 的个数</h1></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ceph osd stat                  ##查看 osd 运行状态</span><br><span class="line">ceph osd dump                  ##查看 osd 映射信息</span><br><span class="line">ceph osd perf                  ##查看数据延迟</span><br><span class="line">ceph osd df                    ##详细列出集群每块磁盘的使用情况</span><br><span class="line">ceph osd tree                  ##查看 osd 目录树</span><br><span class="line">ceph osd getmaxosd             ##查看最大 osd 的个数</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>PG信息<br>ceph pg dump<br>ceph pg stat</p>
 </li>
 </ol>
@@ -473,11 +471,8 @@
 <ol>
 <li>/etc/ceph/ceph.conf 已有配置及默认配置<br>[root@ceph1 ~]# ceph –show-config|grep mon_allow_pool_delete<br>mon_allow_pool_delete = true</li>
 </ol>
-<p>方式1：daemon方式，重启进程后参数丢失</p>
-<h1 id="查看正在运行参数"><a href="#查看正在运行参数" class="headerlink" title="查看正在运行参数"></a>查看正在运行参数</h1><p>ceph –admin-daemon /var/run/ceph/ceph-osd.0.asok config show|grep ‘rbd’</p>
-<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><p>[root@ceph1 ~]# ceph daemon osd.0 config get mon_osd_full_ratio<br>{<br>    “mon_osd_full_ratio”: “0.950000”<br>}</p>
-<h1 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h1><p>ceph daemon osd.1 config set mon_osd_full_ratio 0.97</p>
-<p>方式2： 集群批量修改<br>ceph tell mon.<em> injectargs ‘–mon_osd_report_timeout 400’<br>ceph tell osd.</em> injectargs ‘–rbd_cache_max_dirty_age = 1’</p>
+<p>方式1：daemon方式，重启进程后参数丢失<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 查看正在运行参数</span><br><span class="line">ceph --admin-daemon /var/run/ceph/ceph-osd.0.asok config show|grep &apos;rbd&apos;</span><br><span class="line"># 查看</span><br><span class="line">[root@ceph1 ~]# ceph daemon osd.0 config get mon_osd_full_ratio</span><br><span class="line">&#123;</span><br><span class="line">    &quot;mon_osd_full_ratio&quot;: &quot;0.950000&quot;</span><br><span class="line">&#125;</span><br><span class="line"># 修改</span><br><span class="line">ceph daemon osd.1 config set mon_osd_full_ratio 0.97</span><br></pre></td></tr></table></figure></p>
+<p>方式2： 集群批量修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ceph tell mon.* injectargs &apos;--mon_osd_report_timeout 400&apos;</span><br><span class="line">ceph tell osd.* injectargs &apos;--rbd_cache_max_dirty_age = 1&apos;</span><br></pre></td></tr></table></figure></p>
 <ol start="2">
 <li>分发配置文件<br>修改配置<br>su - ceph-admin<br>cd my-cluster<br>修改 ceph.conf 配置</li>
 </ol>
@@ -485,8 +480,7 @@
 <ol start="3">
 <li>修改副本数<br>[root@ceph1 ~]# ceph osd pool get k8s-rbd size<br>size: 3<br>[root@ceph1 ~]# ceph osd pool set k8s-rbd size 2<br>set pool 5 size to 2<br>参考文档<br><a href="http://blog.51cto.com/wangzhijian/2156186" target="_blank" rel="noopener">http://blog.51cto.com/wangzhijian/2156186</a><br><a href="https://www.cnblogs.com/luohaixian/p/8087591.html" target="_blank" rel="noopener">https://www.cnblogs.com/luohaixian/p/8087591.html</a></li>
 </ol>
-<p>问题</p>
-<ol>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
 <li>执行 ceph-deploy 报错<br>[ceph-admin@deploy my-cluster]$ ceph-deploy<br>Traceback (most recent call last):<br>File “/bin/ceph-deploy”, line 18, in <module><br>from ceph_deploy.cli import main<br>File “/usr/lib/python2.7/site-packages/ceph_deploy/cli.py”, line 1, in <module><br>import pkg_resources<br>ImportError: No module named pkg_resources<br>[ceph-admin@deploy my-cluster]$ exit</module></module></li>
 </ol>
 <p>执行：<br>yum install python-setuptools</p>
@@ -655,7 +649,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置用户密码"><span class="nav-number">1.</span> <span class="nav-text">配置用户密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#esxi中获取"><span class="nav-number">2.</span> <span class="nav-text">esxi中获取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需在esxi主机上执行此命令，web前台配置不生效。"><span class="nav-number">3.</span> <span class="nav-text">需在esxi主机上执行此命令，web前台配置不生效。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-deploy-mds-create-ceph-1-2-3"><span class="nav-number">4.</span> <span class="nav-text">ceph-deploy mds create ceph{1,2,3}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-pool-create-cephfs-data-128"><span class="nav-number">5.</span> <span class="nav-text">ceph osd pool create cephfs_data 128</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-pool-create-cephfs-metadata-64"><span class="nav-number">6.</span> <span class="nav-text">ceph osd pool create cephfs_metadata 64</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mds-caps-可以针对路径进行授权-但是如果两个目录存储在同一个-pool-上的话-即便针对-path-授权似乎也没什么效果-hammer-不支持mds-caps-中的-path-设置"><span class="nav-number">7.</span> <span class="nav-text">mds caps 可以针对路径进行授权, 但是如果两个目录存储在同一个 pool 上的话, 即便针对 path 授权似乎也没什么效果( hammer 不支持mds caps 中的 path 设置).</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#osd-caps-可以针对-pool-进行授权-这个还是比较好使的-但是要注意与前面的-path-保持一致"><span class="nav-number">8.</span> <span class="nav-text">osd caps 可以针对 pool 进行授权, 这个还是比较好使的, 但是要注意与前面的 path 保持一致.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看module"><span class="nav-number">9.</span> <span class="nav-text">查看module</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-stat-查看-osd-运行状态"><span class="nav-number">10.</span> <span class="nav-text">ceph osd stat                  ##查看 osd 运行状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-dump-查看-osd-映射信息"><span class="nav-number">11.</span> <span class="nav-text">ceph osd dump                  ##查看 osd 映射信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-perf-查看数据延迟"><span class="nav-number">12.</span> <span class="nav-text">ceph osd perf                  ##查看数据延迟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-df-详细列出集群每块磁盘的使用情况"><span class="nav-number">13.</span> <span class="nav-text">ceph osd df                    ##详细列出集群每块磁盘的使用情况</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-tree-查看-osd-目录树"><span class="nav-number">14.</span> <span class="nav-text">ceph osd tree                  ##查看 osd 目录树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-getmaxosd-查看最大-osd-的个数"><span class="nav-number">15.</span> <span class="nav-text">ceph osd getmaxosd             ##查看最大 osd 的个数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看正在运行参数"><span class="nav-number">16.</span> <span class="nav-text">查看正在运行参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看"><span class="nav-number">17.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改"><span class="nav-number">18.</span> <span class="nav-text">修改</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设备清单"><span class="nav-number">1.</span> <span class="nav-text">设备清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前置准备"><span class="nav-number">2.</span> <span class="nav-text">前置准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署集群"><span class="nav-number">3.</span> <span class="nav-text">部署集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群启停"><span class="nav-number">4.</span> <span class="nav-text">集群启停</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启动"><span class="nav-number">4.1.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#停止"><span class="nav-number">4.2.</span> <span class="nav-text">停止</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根据进程类型启停"><span class="nav-number">4.3.</span> <span class="nav-text">根据进程类型启停</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移除节点"><span class="nav-number">4.4.</span> <span class="nav-text">移除节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除镜像"><span class="nav-number">4.5.</span> <span class="nav-text">删除镜像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建rgw网关"><span class="nav-number">5.</span> <span class="nav-text">创建rgw网关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISCSI-网关"><span class="nav-number">6.</span> <span class="nav-text">ISCSI 网关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置用户密码"><span class="nav-number">7.</span> <span class="nav-text">配置用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#esxi中获取"><span class="nav-number">8.</span> <span class="nav-text">esxi中获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k8s使用rbd"><span class="nav-number">9.</span> <span class="nav-text">k8s使用rbd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群监控"><span class="nav-number">10.</span> <span class="nav-text">集群监控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查状态"><span class="nav-number">11.</span> <span class="nav-text">检查状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">12.</span> <span class="nav-text">问题</span></a></li></ol></div>
             
 
           </div>
