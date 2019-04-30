@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="设备清单 192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备  安装ansibleyum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168.6.15">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ceph部署及使用">
+<meta property="og:url" content="http://yoursite.com/2019/04/30/ceph部署及使用/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="设备清单 192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备  安装ansibleyum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168.6.15">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-30T01:26:04.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="ceph部署及使用">
+<meta name="twitter:description" content="设备清单 192.168.6.156        node1(OSD MON)192.168.6.157        node2(OSD MON)192.168.6.158        node3(OSD MON) 前置准备  安装ansibleyum -y install ansiblevi /etc/ansible/hosts[node]192.168.6.156192.168.6.15">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/30/ceph部署及使用/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>ceph部署及使用 | Hexo</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/30/ceph部署及使用/" itemprop="url">ceph部署及使用</a></h1>
+          <h1 class="post-title" itemprop="name headline">ceph部署及使用</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <p>设备清单</p>
+        <p>设备清单</p>
 <p>192.168.6.156        node1(OSD MON)<br>192.168.6.157        node2(OSD MON)<br>192.168.6.158        node3(OSD MON)</p>
 <p>前置准备</p>
 <ol>
@@ -502,8 +501,6 @@
 <p>[root@admin-node ceph]# ceph -s<br>  cluster:<br>    id:     63077366-425b-46f3-b9f7-ce214a13403f<br>    health: HEALTH_OK</p>
 <p>存在一个问题：/usr/bin/ceph-mgr 进程卡死，需要手工 kill -9。再执行ceph-deploy mgr create admin-node 才能正常。</p>
 
-          
-        
       
     </div>
     
@@ -520,255 +517,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/my-first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/29/my-first-blog/" itemprop="url">my-first-blog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-29T12:26:38+08:00">
-                2019-04-29
-              </time>
+              <a href="/2019/04/29/my-first-blog/" rel="next" title="my-first-blog">
+                <i class="fa fa-chevron-left"></i> my-first-blog
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          文章摘要
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/29/my-first-blog/">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/test-my-site/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/29/test-my-site/" itemprop="url">test_my_site</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-29T11:31:43+08:00">
-                2019-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -778,138 +548,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/29/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-29T11:29:33+08:00">
-                2019-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -917,6 +560,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -937,8 +584,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -989,6 +645,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置用户密码"><span class="nav-number">1.</span> <span class="nav-text">配置用户密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#esxi中获取"><span class="nav-number">2.</span> <span class="nav-text">esxi中获取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需在esxi主机上执行此命令，web前台配置不生效。"><span class="nav-number">3.</span> <span class="nav-text">需在esxi主机上执行此命令，web前台配置不生效。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-deploy-mds-create-ceph-1-2-3"><span class="nav-number">4.</span> <span class="nav-text">ceph-deploy mds create ceph{1,2,3}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-pool-create-cephfs-data-128"><span class="nav-number">5.</span> <span class="nav-text">ceph osd pool create cephfs_data 128</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-pool-create-cephfs-metadata-64"><span class="nav-number">6.</span> <span class="nav-text">ceph osd pool create cephfs_metadata 64</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mds-caps-可以针对路径进行授权-但是如果两个目录存储在同一个-pool-上的话-即便针对-path-授权似乎也没什么效果-hammer-不支持mds-caps-中的-path-设置"><span class="nav-number">7.</span> <span class="nav-text">mds caps 可以针对路径进行授权, 但是如果两个目录存储在同一个 pool 上的话, 即便针对 path 授权似乎也没什么效果( hammer 不支持mds caps 中的 path 设置).</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#osd-caps-可以针对-pool-进行授权-这个还是比较好使的-但是要注意与前面的-path-保持一致"><span class="nav-number">8.</span> <span class="nav-text">osd caps 可以针对 pool 进行授权, 这个还是比较好使的, 但是要注意与前面的 path 保持一致.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看module"><span class="nav-number">9.</span> <span class="nav-text">查看module</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-stat-查看-osd-运行状态"><span class="nav-number">10.</span> <span class="nav-text">ceph osd stat                  ##查看 osd 运行状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-dump-查看-osd-映射信息"><span class="nav-number">11.</span> <span class="nav-text">ceph osd dump                  ##查看 osd 映射信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-perf-查看数据延迟"><span class="nav-number">12.</span> <span class="nav-text">ceph osd perf                  ##查看数据延迟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-df-详细列出集群每块磁盘的使用情况"><span class="nav-number">13.</span> <span class="nav-text">ceph osd df                    ##详细列出集群每块磁盘的使用情况</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-tree-查看-osd-目录树"><span class="nav-number">14.</span> <span class="nav-text">ceph osd tree                  ##查看 osd 目录树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ceph-osd-getmaxosd-查看最大-osd-的个数"><span class="nav-number">15.</span> <span class="nav-text">ceph osd getmaxosd             ##查看最大 osd 的个数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看正在运行参数"><span class="nav-number">16.</span> <span class="nav-text">查看正在运行参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看"><span class="nav-number">17.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改"><span class="nav-number">18.</span> <span class="nav-text">修改</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1122,6 +794,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
